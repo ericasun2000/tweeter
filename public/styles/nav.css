@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 120px; 
+  width: 100%; 
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+nav div {
+  margin: 1.5em;
+}
+
+.bold {
+  font-weight: bold; 
+}
+
+#logo {
+  font-family: Bungee;
+  font-size: 35px;
+}
