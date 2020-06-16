@@ -1,0 +1,35 @@
+/* tweet button and counter */
+main div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  font-family: Bungee;
+}
+
+/* tweet button */
+main div button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+/* textbox */
+textarea {
+  color: #545149;
+  background-color: transparent;
+  height: 2em;
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid #545149;
+  margin-bottom: 10px;
+
+}
+
+/* textbox label */
+label {
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}
