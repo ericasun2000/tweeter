@@ -13,6 +13,11 @@ main div button {
   color: #FFFFFF;
 }
 
+/* counter */
+.red {
+  color: red;
+}
+
 /* textbox */
 textarea {
   color: #545149;
@@ -28,8 +33,4 @@ textarea {
 /* textbox label */
 label {
   font-weight: bold;
-}
-
-.red {
-  color: red;
 }

@@ -1,0 +1,33 @@
+article {
+  padding: 20px; 
+  border: 5px solid #545149;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+.text {
+  padding: 1.5em; 
+  border-bottom: 5px solid #545149;
+}
+
+.header-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-time{
+  font-size: 15px; 
+}
+
+.username {
+  color: #c5cbe3;
+  visibility: hidden;
+}
+
+article:hover {
+  box-shadow: 5px 5px #c5cbe3
+}
+
+article:hover .username {
+  visibility: visible; 
+}
