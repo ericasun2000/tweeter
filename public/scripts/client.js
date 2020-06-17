@@ -18,6 +18,7 @@ $(document).ready(function() {
         console.log("Finished");
         loadTweets();
         $('#tweet-text').val('');
+        $('.counter').val(140);
       });
     }
   });
@@ -29,9 +30,10 @@ $(document).ready(function() {
   };
 
   const renderTweets = function(tweets) {
-    tweets.forEach(tweet => 
-      $('.old-tweets').append(createTweetElement(tweet)));
-  };
+    tweets.forEach(tweet => {
+      $('.old-tweets').prepend(createTweetElement(tweet));
+    });
+  }
 
   const createTweetElement = function(tweetObj) {
     const $tweet = $(`<article>
@@ -42,7 +44,7 @@ $(document).ready(function() {
           </div>
           <p class="username">${tweetObj.user.handle}</p>
         </header>
-        <p class="text">${tweetObj.content.text}</p>
+        <p class="text">${escape(tweetObj.content.text)}</p>
         <footer class="tweet-footer">
           <p>${tweetObj.created_at}</p>
           <div>
@@ -54,6 +56,12 @@ $(document).ready(function() {
     </article>`);
     return $tweet;
   };
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   loadTweets();
 });
