@@ -1,5 +1,10 @@
+.new-tweet {
+  margin-top: 70px; 
+  margin-bottom: 70px;
+}
+
 /* tweet button and counter */
-main div {
+.button-counter {
   display: flex;
   justify-content: space-between;
   padding: 0;
@@ -8,7 +13,7 @@ main div {
 }
 
 /* tweet button */
-main div button {
+.button-counter button {
   background-color: #4056A1;
   color: #FFFFFF;
 }
@@ -25,7 +30,7 @@ textarea {
   height: 2em;
   width: 100%;
   border: none;
-  border-bottom: 5px solid #545149;
+  border-bottom: 4px solid #545149;
   margin-bottom: 10px;
 
 }
