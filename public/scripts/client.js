@@ -8,13 +8,18 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
-    // console.log(event.target);
-    // console.log($(this).serialize());
     // data type is what we expect to receive from response
-    $.ajax({url: '/tweets', method: 'POST', data: $(this).serialize(), dataType: 'text'}).then(function(response) {
-      console.log(response);
-      // console.log("Finished");
-    })
+    if (!$('#tweet-text').val() || $('#tweet-text').val().trim().length === 0) {
+      alert('Your tweet is empty!');
+    } else if ($('.counter').val() < 0) {
+      alert('Your tweet is too long!');
+    } else {
+      $.ajax({url: '/tweets', method: 'POST', data: $(this).serialize(), dataType: 'text'}).then(function(response) {
+        console.log("Finished");
+        loadTweets();
+        $('#tweet-text').val('');
+      });
+    }
   });
 
   const loadTweets = function() {
@@ -32,7 +37,7 @@ $(document).ready(function() {
     const $tweet = $(`<article>
       <header class="tweet-header">
         <div class="avatar-name">
-            <i class="fas fa-user"></i>
+            <img src=${tweetObj.user.avatars}>
             <p>${tweetObj.user.name}</p>
           </div>
           <p class="username">${tweetObj.user.handle}</p>
