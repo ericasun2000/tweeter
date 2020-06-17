@@ -1,9 +1,11 @@
+/* -------------------- regular state -------------------- */
 article {
   padding: 20px; 
   border: 4px solid #545149;
-  margin-bottom: 40px; 
+  margin-bottom: 50px; 
 }
 
+/* avatar and name on the left, username on the right */
 .fas {
   margin-top: 24px;
   margin-right: 10px; 
@@ -11,7 +13,6 @@ article {
 
 .avatar-name {
   display: flex;
-  justify-content: 
 }
 
 .tweet-header{
@@ -19,6 +20,7 @@ article {
   justify-content: space-between;
 }
 
+/* post time on the left, icons on the right */
 .tweet-footer{
   display: flex;
   justify-content: space-between;
@@ -32,6 +34,7 @@ article {
   margin-bottom: 0px; 
 }
 
+/* -------------------- hover state -------------------- */
 .username {
   font-weight: bold; 
   color: #c5cbe3;
@@ -39,7 +42,7 @@ article {
 }
 
 article:hover {
-  box-shadow: 5px 5px #c5cbe3
+  box-shadow: 8px 8px #c5cbe3
 }
 
 article:hover .username {

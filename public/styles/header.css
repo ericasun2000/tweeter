@@ -1,3 +1,4 @@
+/* style header */
 .page-header {
   display: flex;
   flex-direction: column;
@@ -8,9 +9,9 @@
   background-color: #dc9c24;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   color: #FFFFFF;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
+/* unbold "Sun" */
 .normal {
-  font-weight: normal;
+  font-weight: normal; 
 }

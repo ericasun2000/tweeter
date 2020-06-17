@@ -1,3 +1,4 @@
+/* style navigation */
 nav {
   display: flex;
   justify-content: space-between;
@@ -9,15 +10,18 @@ nav {
   top: 0px;
 }
 
+/* add margin around logo and "Write a new tweet" */
 nav div {
   margin: 1.5em;
 }
 
-.bold {
-  font-weight: bold; 
-}
-
+/* style logo */
 #logo {
   font-family: Bungee;
   font-size: 35px;
+}
+
+/* bold "write" */
+.bold {
+  font-weight: bold; 
 }

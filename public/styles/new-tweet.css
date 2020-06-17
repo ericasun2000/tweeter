@@ -1,3 +1,4 @@
+/* add margin to section */
 .new-tweet {
   margin-top: 70px; 
   margin-bottom: 70px;
@@ -32,7 +33,6 @@ textarea {
   border: none;
   border-bottom: 4px solid #545149;
   margin-bottom: 10px;
-
 }
 
 /* textbox label */
