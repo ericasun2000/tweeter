@@ -5,14 +5,13 @@
  */
 
 $(document).ready(function() {
-  $('#empty').hide();
-  $('#long').hide();
 
+  // ajax request triggered by submit event 
   $('form').on('submit', function(event) {
     event.preventDefault();
-    $('#empty').slideUp().delay(500);
-    $('#long').slideUp().delay(500);
-    // data type is what we expect to receive from response
+    $('#empty').slideUp().delay(300);
+    $('#long').slideUp().delay(300);
+    // validate form
     if (!$('#tweet-text').val() || $('#tweet-text').val().trim().length === 0) {
       $('#empty').slideDown();
     } else if ($('.counter').val() < 0) {
@@ -20,13 +19,16 @@ $(document).ready(function() {
     } else {
       $.ajax({url: '/tweets', method: 'POST', data: $(this).serialize(), dataType: 'text'}).then(function(response) {
         console.log("Finished");
+        // trigger ajax response
         loadTweets();
+        // clear textbox and reset counter
         $('#tweet-text').val('');
         $('.counter').val(140);
       });
     }
   });
 
+  // ajax response triggered by ajax request and on page load
   const loadTweets = function() {
     $.ajax({url: '/tweets', method: 'GET', dataType: 'JSON'}).then(function(response) {
       renderTweets(response);
@@ -37,7 +39,7 @@ $(document).ready(function() {
     tweets.forEach(tweet => {
       $('.old-tweets').prepend(createTweetElement(tweet));
     });
-  }
+  };
 
   const createTweetElement = function(tweetObj) {
     const $tweet = $(`<article>
@@ -61,13 +63,19 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // helper function to convert unix time into relative time from now
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
+
+  // load tweets and hide error messages on page load
   loadTweets();
+  $('#empty').hide();
+  $('#long').hide();
+  
 });
 
 

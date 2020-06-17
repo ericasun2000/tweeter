@@ -23,7 +23,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-   
   </head>
 
   <body>
@@ -33,46 +32,48 @@
       <div><span class="bold">Write </span>a new tweet</div>
     </nav>
 
-    <header class="page-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Erica <span class="normal">Sun</span></h2>
-      </div>
-    </header>
+    <!-- Push content down to prevent navigation clipping -->
+    <div id="push">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
+      <!-- Header -->
+      <header class="page-header">
+        <img src="/images/profile-hex.png"> 
+        <h2>Erica <span class="normal">Sun</span></h2>
+      </header>
 
-        <div class="error-message" id="empty">
-          <i class="fas fa-exclamation-triangle"></i>
-          <p>Your tweet is empty!</p>
-          <i class="fas fa-exclamation-triangle"></i>
-        </div>
-        
-        <div class="error-message" id="long">
-          <i class="fas fa-exclamation-triangle"></i>
-          <p>Your tweet is too long!</p>
-          <i class="fas fa-exclamation-triangle"></i>
-        </div>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
 
-        <!-- <h2>Compose Tweet</h2> -->
-        <form method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="button-counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+        <!-- NEW TWEETS -->
+        <section class="new-tweet">
+          <!-- Potential error messages -->
+          <div class="error-message" id="empty">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Your tweet is empty!</p>
+            <i class="fas fa-exclamation-triangle"></i>
           </div>
-        </form>
-      </section>
+          <div class="error-message" id="long">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Your tweet is too long!</p>
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
 
-      <section class="old-tweets">
-      </section>
+          <!-- Compose new tweet -->
+          <form method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="button-counter">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
-    </main>
+        <!-- OLD TWEETS  -->
+        <section class="old-tweets">
+        </section>
+
+      </main>
+    </div>
   </body>
 </html>

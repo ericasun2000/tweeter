@@ -9,5 +9,5 @@ $(document).ready(function() {
     counter.html(charLeft);
     charLeft < 0 ? counter.addClass("red") : counter.removeClass("red");
 
-    });
+  });
 });
