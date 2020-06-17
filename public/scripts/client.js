@@ -6,13 +6,18 @@
 
 $(document).ready(function() {
 
-  $("form").on("submit", function(event) {
+  $('#empty').hide();
+  $('#long').hide();
+
+  $('form').on('submit', function(event) {
     event.preventDefault();
+    $('#empty').slideUp().delay(500);
+    $('#long').slideUp().delay(500);
     // data type is what we expect to receive from response
     if (!$('#tweet-text').val() || $('#tweet-text').val().trim().length === 0) {
-      alert('Your tweet is empty!');
+      $('#empty').slideDown();
     } else if ($('.counter').val() < 0) {
-      alert('Your tweet is too long!');
+      $('#long').slideDown();
     } else {
       $.ajax({url: '/tweets', method: 'POST', data: $(this).serialize(), dataType: 'text'}).then(function(response) {
         console.log("Finished");

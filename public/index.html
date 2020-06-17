@@ -45,6 +45,19 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+
+        <div class="error-message" id="empty">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Your tweet is empty!</p>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        
+        <div class="error-message" id="long">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Your tweet is too long!</p>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+
         <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
