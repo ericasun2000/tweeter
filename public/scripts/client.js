@@ -5,7 +5,6 @@
  */
 
 $(document).ready(function() {
-
   $('#empty').hide();
   $('#long').hide();
 
@@ -51,7 +50,7 @@ $(document).ready(function() {
         </header>
         <p class="text">${escape(tweetObj.content.text)}</p>
         <footer class="tweet-footer">
-          <p>${tweetObj.created_at}</p>
+          <p>${moment(tweetObj.created_at, "").fromNow()}</p>
           <div>
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
