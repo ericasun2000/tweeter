@@ -1,0 +1,26 @@
+@media only screen and (min-width: 1024px) {
+  #push {
+    display: flex;
+    justify-content: space-between;
+    /* for desktop, since the navigation is colored, push content down to prevent clipping */
+    padding-top: 11.5rem;
+    margin-right: 3rem;
+    margin-left: 3rem; 
+  }
+
+  .page-header {
+    width: 40%;
+  }
+
+  .new-tweet {
+    margin-top: 0;
+  }
+
+  main {
+    margin-left: 3rem; 
+  }
+
+  nav {
+    background-color: #4056A1;
+  }
+};

@@ -47,4 +47,5 @@ label {
   border: 0.25rem solid red;
   display: flex;
   justify-content: center;
+  align-items: center;
 }

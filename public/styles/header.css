@@ -15,8 +15,3 @@
 .normal {
   font-weight: normal; 
 }
-
-/* push content down to prevent navigation clipping */
-#push {
-  padding-top: 120px; 
-}
