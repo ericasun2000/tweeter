@@ -1,7 +1,7 @@
 /* add margin to section */
 .new-tweet {
-  margin-top: 70px; 
-  margin-bottom: 70px;
+  margin-top: 4rem; 
+  margin-bottom: 4rem;
 }
 
 /* tweet button and counter */
@@ -31,8 +31,8 @@ textarea {
   height: 2em;
   width: 100%;
   border: none;
-  border-bottom: 4px solid #545149;
-  margin-bottom: 10px;
+  border-bottom: 0.25rem solid #545149;
+  margin-bottom: 0.5rem;
 }
 
 /* textbox label */
@@ -43,8 +43,8 @@ label {
 /* potential error message */
 .error-message {
   color: red;
-  margin-bottom: 30px; 
-  border: 4px solid red;
+  margin-bottom: 1.5rem; 
+  border: 0.25rem solid red;
   display: flex;
   justify-content: center;
 }
