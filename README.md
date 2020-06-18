@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone. The front end was built using HTML, CSS, JS, jQuery and AJAX while the back-end was built with Node, Express and MongoDB back-end skills.
+Tweeter is a simple, single-page Twitter clone. The front end was built with HTML, CSS, JS, jQuery and AJAX while the back-end was built with Node, Express and MongoDB back-end skills.
 
 ## Final Product
 
