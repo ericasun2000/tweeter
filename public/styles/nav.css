@@ -22,7 +22,8 @@ nav {
   font-weight: bold; 
 }
 
-.toggle {
+/* form button */
+button {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,8 +34,19 @@ nav {
   color: white;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
-.toggle:hover .fas {
+/* form button animation */
+button:hover .fas {
   color: red;
+  position: relative;
+  animation: slideUpDown 1000ms ease-in-out infinite;
 }
+
+@keyframes slideUpDown {   
+  0%{top:0px; transform:rotate(0deg)}   
+  50%{top:20px}   
+  100%{top:0px; transform:rotate(360deg)}
+} 
+

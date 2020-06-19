@@ -6,7 +6,14 @@
 
 $(document).ready(function() {
 
-  // ajax request triggered by submit event 
+  // form slides down and autofocuses when nav button is pressed
+  $('.nav-button').on('click', function(event) {
+    event.preventDefault();
+    $('.new-tweet').slideToggle();
+    $('#tweet-text').focus();
+  });
+
+  // ajax request triggered by submit event
   $('form').on('submit', function(event) {
     event.preventDefault();
     $('#empty').slideUp().delay(300);
@@ -35,12 +42,14 @@ $(document).ready(function() {
     });
   };
 
+  // call createTweetElement on each json object in array
   const renderTweets = function(tweets) {
     tweets.forEach(tweet => {
       $('.old-tweets').prepend(createTweetElement(tweet));
     });
   };
 
+  // create tweet element given tweet object
   const createTweetElement = function(tweetObj) {
     const $tweet = $(`<article>
       <header class="tweet-header">
@@ -75,6 +84,7 @@ $(document).ready(function() {
   loadTweets();
   $('#empty').hide();
   $('#long').hide();
+  $('.new-tweet').hide();
   
 });
 

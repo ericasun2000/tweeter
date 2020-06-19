@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/old-tweets.css" type="text/css" />
     <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,11 +30,11 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div id="logo">tweeter</div>
-      <div class="toggle">
-        <button class="nav-button" type="submit"><span class="bold">Write </span>a new tweet</button>
+      <div id="logo">tweeter <i class="fab fa-twitter"></i></div>
+      <button class="nav-button">
+        <div><span class="bold">Write </span>a new tweet</div>
         <i class="fas fa-angle-double-down"></i>
-     </div>
+      </button>  
     </nav>
 
     <!-- Push content down to prevent navigation clipping -->
@@ -74,9 +75,9 @@
         </section>
 
         <!-- OLD TWEETS  -->
-        <section class="old-tweets">
+        <section class="old-tweets"> 
         </section>
-
+        
       </main>
     </div>
   </body>

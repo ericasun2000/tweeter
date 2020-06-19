@@ -27,6 +27,10 @@ article {
   font-size: 1rem; 
 }
 
+.tweet-footer .fas {
+  color:  #4056A1;
+}
+
 .text {
   padding-bottom: 1.5em; 
   border-bottom: 0.25rem solid #545149;

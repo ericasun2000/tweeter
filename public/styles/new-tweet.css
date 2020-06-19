@@ -31,6 +31,7 @@ textarea {
   height: 2em;
   width: 100%;
   border: none;
+  outline: none;
   border-bottom: 0.25rem solid #545149;
   margin-bottom: 0.5rem;
 }
