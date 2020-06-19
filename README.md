@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone. The front end was built with HTM
 
 ## Final Product
 !["Screenshot of desktop homepage"](https://github.com/ericasun2000/tweeter/blob/master/docs/desktop.png)
-!["Screenshot of mobile homepage"]()
+!["Screenshot of mobile homepage"](https://github.com/ericasun2000/tweeter/blob/master/docs/mobile.png)
 
 
 ## Dependencies
